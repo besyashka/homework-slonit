@@ -1,5 +1,5 @@
 //Вариант аналога метода slice № 1
-const mySlice = (arr, start = 0, end = arr.length) => {
+function mySlice(arr, start = 0, end = arr.length) {
   const result = [];
 
   if (end < 0) {
@@ -18,7 +18,7 @@ const mySlice = (arr, start = 0, end = arr.length) => {
 };
 
 /* Вариант аналога метода slice № 2
-const mySlice = (arr, start = 0, end = arr.length) => {
+function mySlice(arr, start = 0, end = arr.length) {
   return arr.filter((_, i) => {
     if (end < 0) {
       end = arr.length + end;
@@ -62,6 +62,6 @@ function myIncludes(arr, item, from = 0) {
 
 const arr = [5, 4, 8, 3, 1, 0];
 
-console.log(mySlice(arr, 1, 3)); // 4, 8]
+console.log(mySlice(arr, 1, 3)); // [4, 8]
 console.log(myIndexOf(arr, 4, 0)); // 1
 console.log(myIncludes(arr, 3, 2)); // true
